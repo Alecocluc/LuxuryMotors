@@ -2,6 +2,16 @@ html {
     font-size: 100%;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
 body {
     background-color: rgb(240, 240, 240);
     margin: 0px;
@@ -135,27 +145,6 @@ body {
     max-width: 100%;
 }
 
-.articleimgleft h1,
-.articleimgright h1,
-.articleimgtop h1,
-.map h1,
-.grid h1,
-.contact h1 {
-    font-weight: bold;
-    font-size: 2rem;
-    margin-top: 5px;
-}
-
-.gridelement h1 {
-    font-size: 1.5rem;
-}
-
-.articleimgleft p,
-.articleimgright p {
-    margin-top: 15px;
-    font-size: 1.2rem;
-}
-
 .content {
     padding: 20px;
     background-color: rgb(255, 255, 255);
@@ -169,7 +158,7 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.map p{
+.map p {
     margin: 20px 0px 0px 0px;
 }
 
@@ -223,18 +212,18 @@ footer {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 600px) {
     .menu {
         flex-direction: column;
-        height: 250px;
+        height: 200px;
     }
 
     .logo {
@@ -245,6 +234,7 @@ footer {
     .menu-items {
         margin: auto;
         flex-direction: column;
+        text-align: center;
     }
 
     .menu-items li {
