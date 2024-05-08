@@ -1,0 +1,255 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    margin: 0px;
+    font-size: 1rem;
+    font-family: Montserrat;
+}
+
+.menu {
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    height: 75px;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.menu-items {
+    margin-left: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-items li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu-link {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: .3s linear;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+.logo {
+    margin-left: 0.8%;
+    height: 85%;
+}
+
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    z-index: 1;
+    font-weight: 1;
+}
+
+.dropdown-parent:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.articleimgleft,
+.articleimgright {
+    display: flex;
+    max-width: 2140px;
+    width: 92%;
+    margin: 20px auto 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.articleimgtop {
+    display: flex;
+    flex-direction: column;
+    max-width: 2140px;
+    width: 92%;
+    margin: 20px auto 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 2140px;
+    width: 92%;
+    margin: 20px auto 0 auto;
+    gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+.gridelement {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.gridcontent {
+    padding: 20px;
+}
+
+.gridelement button {
+    background-color: rgb(223, 223, 223);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    font-family: Montserrat;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.gridelement button:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+
+
+.articleimgleft img,
+.articleimgright img {
+    width: 40%;
+    max-width: 100%;
+}
+
+.articleimgleft h1,
+.articleimgright h1,
+.articleimgtop h1,
+.map h1,
+.grid h1,
+.contact h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
+.gridelement h1 {
+    font-size: 1.5rem;
+}
+
+.articleimgleft p,
+.articleimgright p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.content {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.map {
+    width: 92%;
+    padding: 20px;
+    margin: 20px auto 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.map p{
+    margin: 20px 0px 0px 0px;
+}
+
+.contact {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: rgb(255, 255, 255);
+    width: 92%;
+    padding: 20px;
+    margin: 20px auto 0 auto;
+}
+
+footer {
+    background-color: rgb(223, 223, 223);
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .logo {
+        height: 50%;
+        margin: 5px 0px 0px 0px;
+    }
+
+    .menu-items {
+        margin: auto;
+    }
+
+    .articleimgleft,
+    .articleimgright,
+    .articleimgtop {
+        flex-direction: column;
+        width: 92%;
+    }
+
+    .articleimgleft img,
+    .articleimgright img {
+        width: 100%;
+        height: auto;
+    }
+
+    .articleimgright {
+        flex-direction: column-reverse;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .logo {
+        height: 30%;
+        margin: 5px 0px 0px 0px;
+    }
+
+    .menu-items {
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .menu-items li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
