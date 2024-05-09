@@ -2,21 +2,21 @@ html {
     font-size: 100%;
 }
 
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 0;
-}
-
-p {
-    font-size: 1.2rem;
-}
-
 body {
     background-color: rgb(240, 240, 240);
     margin: 0px;
     font-size: 1rem;
     font-family: Montserrat;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 .menu {
@@ -79,34 +79,38 @@ body {
 }
 
 .articleimgleft,
-.articleimgright {
+.articleimgright,
+.articleimgtop {
     display: flex;
     max-width: 2140px;
-    width: 92%;
+    width: 94%;
     margin: 20px auto 0 auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .articleimgtop {
-    display: flex;
     flex-direction: column;
-    max-width: 2140px;
-    width: 92%;
-    margin: 20px auto 0 auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
     max-width: 2140px;
-    width: 92%;
+    width: 94%;
     margin: 20px auto 0 auto;
     gap: 20px;
 }
 
 .grid img {
     width: 100%;
+}
+
+.grid h1 {
+    font-size: 1.5rem;
+}
+
+.grid p {
+    font-size: 1rem;
 }
 
 .gridelement {
@@ -145,29 +149,90 @@ body {
     max-width: 100%;
 }
 
+form {
+    margin: 0;
+}
+
 .content {
     padding: 20px;
     background-color: rgb(255, 255, 255);
 }
 
-.map {
-    width: 92%;
-    padding: 20px;
-    margin: 20px auto 0 auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+.contact input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
+    font-family: Montserrat;
+}
+
+.contact input:focus {
+    border: none;
+}
+
+.contact input[type="submit"] {
+    background-color: rgb(223, 223, 223);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    font-family: Montserrat;
+    cursor: pointer;
+    transition: .3s linear;
+    margin-bottom: 0px;
+}
+
+
+.contact input[type="submit"]:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+.map {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 20px auto 0px auto;
+    width: 94%;
+}
+
+.contact,
+.socialmedia {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: 100%;
+}
+
+.contact {
+    flex: 0 0 70%
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 94%;
+    margin: 20px auto 0 auto;
 }
 
 .map p {
     margin: 20px 0px 0px 0px;
 }
 
-.contact {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    background-color: rgb(255, 255, 255);
-    width: 92%;
-    padding: 20px;
-    margin: 20px auto 0 auto;
+.socialmediacontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.socialmedia img {
+    max-width: 125px;
 }
 
 footer {
@@ -183,6 +248,8 @@ footer {
     .menu {
         flex-direction: column;
         height: 100px;
+        width: 100%;
+
     }
 
     .logo {
@@ -198,7 +265,6 @@ footer {
     .articleimgright,
     .articleimgtop {
         flex-direction: column;
-        width: 92%;
     }
 
     .articleimgleft img,
@@ -218,12 +284,21 @@ footer {
     p {
         font-size: 1rem;
     }
+
+    .socialmedia img {
+        max-width: 100px;
+    }
+
+    .social {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 600px) {
     .menu {
         flex-direction: column;
         height: 200px;
+        width: auto;
     }
 
     .logo {
@@ -241,5 +316,9 @@ footer {
         display: block;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    .socialmedia img {
+        max-width: 75px;
     }
 }
